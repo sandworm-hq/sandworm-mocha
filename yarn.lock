@@ -2577,12 +2577,12 @@ safer-buffer@^2.0.2:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sandworm@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/sandworm/-/sandworm-1.2.0.tgz#84b67331fac4e1c66198a1733a4ed625fde2163d"
-  integrity sha512-64qoYfwuf9jtwrxSWgDsYD0WlpJ6+djbh9zu4s4vnVREgyYID1xrVYzvNMHnUpv6/bEIsCzTpiciP6o5ZeUO9Q==
+sandworm@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/sandworm/-/sandworm-1.2.1.tgz#8a0c7ba516bc3b39c59207832b69d7ab7927f2a6"
+  integrity sha512-a6AAMfkiB1tc7zbU1id0mkHPjHY6uMc8qatmBqy/YmMIKL8dWb0Qy5p2jzRp8ppNrb7O1SqB5SLmI9Npvg2s/A==
   dependencies:
-    source-map-js "^1.0.2"
+    source-map-js "1.0.2"
 
 "semver@2 || 3 || 4 || 5":
   version "5.7.1"
@@ -2662,7 +2662,7 @@ snyk-nodejs-lockfile-parser@1.43.1:
     tslib "^1.9.3"
     uuid "^8.3.0"
 
-source-map-js@^1.0.2:
+source-map-js@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
