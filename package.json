@@ -1,0 +1,38 @@
+{
+  "name": "sandworm-mocha",
+  "version": "1.0.0",
+  "description": "Generate your app's security profile based on your test suite 🪱",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "yarn eslint ./src/",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandworm-hq/sandworm-mocha.git"
+  },
+  "keywords": [
+    "mocha",
+    "security",
+    "audit",
+    "dependencies",
+    "sandbox",
+    "harden"
+  ],
+  "author": "Sandworm <dev@sandworm.dev>",
+  "license": "MIT",
+  "homepage": "https://sandworm.dev",
+  "dependencies": {
+    "sandworm": "1.2.0",
+    "snyk-nodejs-lockfile-parser": "1.43.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "husky": "^8.0.0"
+  }
+}
