@@ -24,7 +24,7 @@
   "homepage": "https://sandworm.dev",
   "dependencies": {
     "sandworm": "1.2.1",
-    "snyk-nodejs-lockfile-parser": "1.43.1"
+    "sandworm-utils": "1.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
