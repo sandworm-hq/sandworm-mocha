@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/sandworm-hq/sandworm-mocha/compare/sandworm-mocha-v1.1.0...sandworm-mocha-v1.2.0) (2022-09-27)
+
+
+### Features
+
+* extract common utils to separate module ([010027c](https://github.com/sandworm-hq/sandworm-mocha/commit/010027c209a0ceb4cf592047632a0e4b31aeb2a9))
+
 ## [1.1.0](https://github.com/sandworm-hq/sandworm-mocha/compare/sandworm-mocha-v1.0.0...sandworm-mocha-v1.1.0) (2022-09-27)
 
 
