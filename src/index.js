@@ -33,13 +33,13 @@ module.exports = {
     beforeAll(done) {
       logger.log('Starting listener...');
       recordSandwormActivity(
-        () => {
-          logger.log('Listening for events');
-          done();
-        },
         (err) => {
           logger.log('Error listening for events:', err);
           done(err);
+        },
+        () => {
+          logger.log('Listening for events');
+          done();
         },
       );
     },
@@ -48,8 +48,7 @@ module.exports = {
       logger.log(`Intercepted ${activity.length} events`);
       stopRecordingSandwormActivity(() => {
         (async () => {
-          try {
-            const [devDependencies, prodDependencies] = await loadDependencies(appPath);
+          loadDependencies(appPath, ([devDependencies, prodDependencies]) => {
             const ignoredModules =
               config && Array.isArray(config.ignoredModules) ? config.ignoredModules : [];
             const permissions = getPermissionsFromActivity(activity);
@@ -121,10 +120,7 @@ module.exports = {
                   : undefined,
               );
             }
-          } catch (error) {
-            logger.error(error);
-            done(error);
-          }
+          });
         })();
       });
     },
