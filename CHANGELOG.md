@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/sandworm-hq/sandworm-mocha/compare/sandworm-mocha-v1.3.0...sandworm-mocha-v1.4.0) (2022-09-29)
+
+
+### Features
+
+* update `sandworm-utils` to v1.4.0 ([c8f2420](https://github.com/sandworm-hq/sandworm-mocha/commit/c8f2420d1b6a8a21c10088bfb37828b4a6cc6d9a))
+
 ## [1.3.0](https://github.com/sandworm-hq/sandworm-mocha/compare/sandworm-mocha-v1.2.0...sandworm-mocha-v1.3.0) (2022-09-29)
 
 
