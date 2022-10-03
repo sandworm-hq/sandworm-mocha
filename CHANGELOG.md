@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/sandworm-hq/sandworm-mocha/compare/sandworm-mocha-v1.5.0...sandworm-mocha-v1.5.1) (2022-10-03)
+
+
+### Bug Fixes
+
+* refactor `afterAll` hook ([19e55bb](https://github.com/sandworm-hq/sandworm-mocha/commit/19e55bbdbd9b14fdf2dabbcff0266755cb5006e4))
+
 ## [1.5.0](https://github.com/sandworm-hq/sandworm-mocha/compare/sandworm-mocha-v1.4.0...sandworm-mocha-v1.5.0) (2022-09-29)
 
 
