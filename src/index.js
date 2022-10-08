@@ -47,7 +47,7 @@ module.exports = {
       const activity = getRecordedActivity();
       logger.log(`Intercepted ${activity.length} events`);
       stopRecordingSandwormActivity(() => {
-        loadDependencies(appPath, ({devDependencies, prodDependencies}) => {
+        loadDependencies(appPath, true, ({devDependencies, prodDependencies}) => {
           const {currentPermissions, newPermissions} = getPermissions(activity, devDependencies, prodDependencies);
 
           if (!currentPermissions) {
