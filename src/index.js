@@ -1,10 +1,11 @@
 const path = require('path');
 const {
   recorder: {recordSandwormActivity, stopRecordingSandwormActivity, getRecordedActivity},
-  files: {loadDependencies, loadConfig, writePermissions, loadPermissions, SANDWORM_PERMISSION_FILE_NAME},
+  files: {loadConfig, writePermissions, loadPermissions, SANDWORM_PERMISSION_FILE_NAME},
   permissions: {getPermissionsFromActivity, getPackagePermissions, comparePermissions},
   sandworm: {loadSandworm},
   logger,
+  graph,
 } = require('sandworm-utils');
 
 const appPath = process.env.SANDWORM_APP_PATH || path.join(__dirname, '..', '..', '..');
@@ -24,7 +25,7 @@ const getPermissions = (activity, devDependencies, prodDependencies) => {
   });
 
   return {currentPermissions, newPermissions};
-}
+};
 
 loadSandworm({config, trustedModules: ['mocha']});
 
@@ -47,8 +48,12 @@ module.exports = {
       const activity = getRecordedActivity();
       logger.log(`Intercepted ${activity.length} events`);
       stopRecordingSandwormActivity(() => {
-        loadDependencies(appPath, true, ({devDependencies, prodDependencies}) => {
-          const {currentPermissions, newPermissions} = getPermissions(activity, devDependencies, prodDependencies);
+        graph(appPath, ({devDependencies, prodDependencies}) => {
+          const {currentPermissions, newPermissions} = getPermissions(
+            activity,
+            devDependencies.map(({name}) => name),
+            prodDependencies.map(({name}) => name),
+          );
 
           if (!currentPermissions) {
             writePermissions(appPath, newPermissions, () => {
